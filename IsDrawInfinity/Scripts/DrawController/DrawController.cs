@@ -6,6 +6,8 @@ namespace IsDrawInfinity.Scripts.DrawController
 {
     internal class DrawController
     {
+        public bool CanLoadResult = false;
+
         private PictureBox _picDigit;
         private Pen _drawingPen;
         private Point lastPoint = Point.Empty;
@@ -13,7 +15,6 @@ namespace IsDrawInfinity.Scripts.DrawController
         private Bitmap _bitmap;
 
         public Bitmap Drawing { get => _bitmap; }
-
         public DrawController(PictureBox picDigit)
         {
             _picDigit = picDigit;
@@ -62,6 +63,7 @@ namespace IsDrawInfinity.Scripts.DrawController
         {
             lastPoint = e.Location;
             isMouseDown = true;
+            CanLoadResult = true;
         }
     }
 }

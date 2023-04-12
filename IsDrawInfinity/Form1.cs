@@ -18,21 +18,19 @@ namespace IsDrawInfinity
         private BinaryMatrix _currentBinaryMatrix = BinaryMatrix.Empty();
         private const int BINARYZE_THRESHOLD = 100;
 
-        private string path;
-
         public Form1()
         {
             InitializeComponent();
-            _dataSet.LoadFile();
 
-            path = Directory.GetCurrentDirectory() + @"\data.json";
-            ResultLabel.Text = path;
+            _dataSet.LoadFile();
 
             _drawController = new DrawController(picDigit);
         }
 
         private void ResultButton_Click(object sender, EventArgs e)
         {
+            if (!_drawController.CanLoadResult)
+                return;
             _currentBinaryMatrix = BinaryMatrix.Create(new ImageProcessing(_drawController.Drawing)
                .Grayscale()
                .Binarize(BINARYZE_THRESHOLD)
@@ -46,6 +44,10 @@ namespace IsDrawInfinity
             _currentBinaryMatrix.Flatten(vector => ResultLabel.Text = (_dataSet.Predict(vector, Distance.Euclidean) == "0") ? "Это знак бесконечности!" : "Это не знак бесконечности");
         }
 
-        private void ClearButton_Click(object sender, EventArgs e) => _drawController.Clear();
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            _drawController.Clear();
+            _drawController.CanLoadResult = false;
+        }
     }
 }

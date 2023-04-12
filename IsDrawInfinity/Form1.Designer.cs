@@ -32,9 +32,9 @@
             this.picDigit = new System.Windows.Forms.PictureBox();
             this.ClearButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ResultButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.ResultLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResultButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDigit)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -77,10 +77,30 @@
             this.groupBox2.Controls.Add(this.ClearButton);
             this.groupBox2.Location = new System.Drawing.Point(330, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(743, 327);
+            this.groupBox2.Size = new System.Drawing.Size(217, 327);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Result";
+            // 
+            // ResultLabel
+            // 
+            this.ResultLabel.AutoSize = true;
+            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ResultLabel.Location = new System.Drawing.Point(6, 116);
+            this.ResultLabel.Name = "ResultLabel";
+            this.ResultLabel.Size = new System.Drawing.Size(152, 17);
+            this.ResultLabel.TabIndex = 4;
+            this.ResultLabel.Text = "Нажмите \"Результат\"!";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(2, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Результат:";
             // 
             // ResultButton
             // 
@@ -93,34 +113,15 @@
             this.ResultButton.UseVisualStyleBackColor = true;
             this.ResultButton.Click += new System.EventHandler(this.ResultButton_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(2, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Результат:";
-            // 
-            // ResultLabel
-            // 
-            this.ResultLabel.AutoSize = true;
-            this.ResultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ResultLabel.Location = new System.Drawing.Point(6, 116);
-            this.ResultLabel.Name = "ResultLabel";
-            this.ResultLabel.Size = new System.Drawing.Size(152, 17);
-            this.ResultLabel.TabIndex = 4;
-            this.ResultLabel.Text = "Нажмите \"Результат\"!";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 341);
+            this.ClientSize = new System.Drawing.Size(549, 343);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.picDigit);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
